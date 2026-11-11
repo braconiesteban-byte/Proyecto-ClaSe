@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 100px;
     background-color: #58a5ee;
 }
 
@@ -37,12 +37,7 @@
     margin: 10px;
 }
 
-.nav-list {
-    font-size: 25px;
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
+
 
 a {
     text-decoration: none;
@@ -127,10 +122,12 @@ p {
         "img1 ."
         "img1 p1"
         "img1 sub1"
+        "img1 btn1"
         "img1 ."
         ". img2"
         "p2 img2"
         "sub2 img2"
+        "btn2 img2"
         ". img2"
         ;
     justify-items: center;
@@ -153,6 +150,10 @@ p {
     grid-area: sub1;
 }
 
+.btn-grid{
+    grid-area: btn1;
+}
+
 .img-alarma-grid{
     grid-area: img2;
 }
@@ -165,42 +166,11 @@ p {
     grid-area: sub2;
 }
 
-.flyer-armado-pc {
-    display: flex;
-    margin: 0 auto;
-    padding: 50px 0;
+.btn-grid2{
+    grid-area: btn2;
 }
 
-.cta-grid {
-    display:grid;
-    grid-template-areas:
-        "img1 . img3"
-        "img1 img2 img3"
-        "img1 . img3"
-        ;
-    justify-items: center;
-}
 
-.cta-computadora-grid {
-    grid-area: img1;
-    width: 600px;
-    height: auto;
-    border-radius: 90px;
-}
-
-.cta-logo-grid {
-    grid-area: img2;
-    width: 900px;
-    height: auto;
-    border-radius: 90px;
-}
-
-.cta-electrodomesticos-grid {
-    grid-area: img3;
-    width: 600px;
-    height: auto;
-    border-radius: 90px;
-}
 
 /* footer */
 

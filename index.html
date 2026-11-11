@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shorcut icon" href="./assets/logos/logoClaSe.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>ClaSe Electronica</title>
 </head>
 <body>
     <header class="header">
         <img src="./assets/logos/logoClaSe.png" alt="Logo de ClaSe Electronica" class="logo">
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ClaSe Electronica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Servicios
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Alarmas de seguridad</a></li>
+                        <li><a class="dropdown-item" href="#">Camaras de seguridad</a></li>
+                        <li><a class="dropdown-item" href="#">Reparacion de PC's/Noteboocks's</a></li>
+                        <li><a class="dropdown-item" href="#">Armado de PC's</a></li>
+                    </ul>
+                </li>
             </ul>
+            </div>
+        </div>
         </nav>
     </header>
     <main>
@@ -33,17 +58,14 @@
                 </figure>
                 <h3 class="h3-camara">Camaras de seguridad</h3>
                 <p class="p-camara">Instalación de cámaras de videovigilancia de última generación. Ofrecemos tecnología innovadora y sistemas de monitoreo diseñados para brindar mayor protección, tranquilidad y control en hogares, comercios y empresas. Nuestro compromiso es ofrecer soluciones eficientes, confiables y adaptadas a las necesidades de cada cliente.</p>
+                <button type="button" class="btn btn-outline-info btn-grid">Mas información</button>
                 <figure class="img-alarma-grid">
                     <img src="./assets/ilustrativas/alarma de seguridad.jpeg" alt="Alarma" class="img-alarma">
                 </figure>
                 <h4 class="h4-alarma">Alarmas de seguridad</h4>
                 <p class="p-alarma">Instalación de sistemas de alarmas de última generación. Ofrecemos tecnología avanzada para la detección y prevención de intrusiones, brindando protección, tranquilidad y confianza en hogares, comercios y empresas. Nuestro compromiso es proporcionar sistemas eficientes y confiables, adaptados a las necesidades de cada cliente..</p>
+                <button type="button" class="btn btn-outline-info btn-grid2">Mas información</button>
         </section>
-        <div class="cta-grid">
-            <img src="assets/ilustrativas/computadoras.png" alt="Imagen de computadoras" class="cta-computadora-grid">
-            <img src="./assets/logos/logoClaSe.png" alt="Logo de ClaSe Electronica" class="cta-logo-grid">
-            <img src="assets/ilustrativas/electrodomesticos.png" alt="Imagen de electrodomésticos" class="cta-electrodomesticos-grid">
-        </div>
     </main>
     <footer>
         <h4 class="encontranos">ENCONTRANOS</h4>
@@ -76,5 +98,6 @@
             <img src="./assets/logos/whatsapp.png" alt="Logo de WhatsApp" class="wsp-logo">
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
