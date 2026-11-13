@@ -48,15 +48,27 @@
             <h1 class="contacto-h1">
                 CONTACTATE CON NOSOTROS PARA QUE PODAMOS ASESORARTE!
             </h1>
+            <div class="input-group">
+                <span class="input-group-text">Nombre y Apellido</span>
+                <input type="text" aria-label="First name" class="form-control">
+                <input type="text" aria-label="Last name" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Correo electronico" aria-label="Recipient’s username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+            </div>
             <label for="exampleDataList" class="form-label">Que servicio busca?</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione el servicio...">
-            <datalist id="datalistOptions">
-            <option value="Instalacion de camaras">
-            <option value="Instalacion de alarma de seguridad">
-            <option value="Software">
-            <option value="Reparaciones de Pc's y/o Notebooks">
-            <option value="">
-            </datalist>
+            <select class="form-select" aria-label="Default select example">
+                <option value="" selected disabled hidden>Seleccione el servicio</option>
+                <option value="1">Instalacion de camaras de seguridad</option>
+                <option value="2">Instalacion de alarmas de seguridad</option>
+                <option value="3">Software</option>
+                <option value="3">Reparacion de Pc's y/o Notebooks</option>
+            </select>
+            <label for="exampleDataList" class="form-label">Describe brevemente tu problema/consulta</label>
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
         </main>
         <footer>
             <h4 class="encontranos">ENCONTRANOS</h4>
