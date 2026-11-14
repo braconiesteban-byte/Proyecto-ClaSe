@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shorcut icon" href="../assets/logos/logo ClaSe circular.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <title>Contacto</title>
+    </head>
+    <body>
+    <header class="header">
+        <img src="../assets/logos/logoClaSe.png" alt="Logo de ClaSe Electronica" class="logo">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-4 border border-primary border-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ClaSe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Asesoramiento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Servicios
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Alarmas de seguridad</a></li>
+                        <li><a class="dropdown-item" href="#">Camaras de seguridad</a></li>
+                        <li><a class="dropdown-item" href="#">Reparacion de PC's/Noteboocks's</a></li>
+                        <li><a class="dropdown-item" href="#">Armado de PC's</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+    </header>
+    <main>
+            <h1 class="contacto-h1">
+                CONTACTATE CON NOSOTROS PARA QUE PODAMOS ASESORARTE!
+            </h1>
+            <div>
+                <label for="exampleDataList" class="form-label p-1 m-2 d-flex justify-content-center">Como quiere que lo identifiquemos?</label>
+            </div>
+            <div class="input-group p-1">
+                <span class="input-group-text border border-primary border-1 shadow bg-body-tertiary">Nombre y Apellido</span>
+                <input type="text" aria-label="First name" class="form-control border border-primary border-1 shadow bg-body-tertiary">
+                <input type="text" aria-label="Last name" class="form-control border border-primary border-1 shadow bg-body-tertiary">
+            </div>
+            <div>
+                <label for="exampleDataList" class="form-label p-1 m-2 d-flex justify-content-center">Indique su correo electronico</label>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control border border-primary border-1 shadow bg-body-tertiary" placeholder="Correo electronico" aria-label="Recipient’s username" aria-describedby="basic-addon2">
+            </div>
+            <div class="row g-3 mb-3">
+                <!-- Columna 1: Teléfono -->
+                <div class="col-12 col-md-6">
+                    <label for="inputTelefono" class="form-label text-center d-block">
+                        Número de teléfono
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="inputTelefono"
+                        class="form-control text-center border border-primary border-1 shadow bg-body-tertiary" 
+                        placeholder="Coloque su número de teléfono" 
+                        aria-label="Número de teléfono">
+                </div>
+
+                <!-- Columna 2: Dirección -->
+                <div class="col-12 col-md-6">
+                    <label for="inputDireccion" class="form-label text-center d-block">
+                        Dirección
+                    </label>
+                    <input 
+                        type="text" 
+                        id="inputDireccion"
+                        class="form-control text-center border border-primary border-1 shadow bg-body-tertiary" 
+                        placeholder="Ingrese su dirección" 
+                        aria-label="Dirección">
+                </div>
+            </div>
+
+            <label for="exampleDataList" class="form-label p-1 d-flex justify-content-center">Que servicio busca?</label>
+            <select class="form-select border border-primary border-1 shadow bg-body-tertiary m-2" aria-label="Default select example">
+                <option value="" selected disabled hidden>Seleccione el servicio</option>
+                <option value="1">Instalacion de camaras de seguridad</option>
+                <option value="2">Instalacion de alarmas de seguridad</option>
+                <option value="3">Software</option>
+                <option value="3">Reparacion de Pc's y/o Notebooks</option>
+            </select>
+            <label for="exampleDataList" class="form-label p-2 d-flex justify-content-center">Describe brevemente tu problema/consulta</label>
+            <div class="input-group rounded-2 border border-primary border-1 shadow bg-body-tertiary m-3">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <div class="d-flex justify-content-center gap-3">
+                <input class="btn btn-primary" type="submit" value="Enviar">
+                <input class="btn btn-primary" type="reset" value="Borrar">
+            </div>
+    </main>
+    <footer>
+            <h4 class="encontranos">ENCONTRANOS</h4>
+            <ul class="rrss-list m-1">
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/logos/instagram.png" alt="Logo de Instagram" class="rrss">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="../assets/logos/facebook.png" alt="Logo de Facebook" class="rrss">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="../assets/logos/x.png" alt="Logo de Twitter" class="rrss">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../assets/logos/yt.png" alt="Logo de YouTube" class="rrss">
+                    </a>
+                </li>
+            </ul>
+            <p class="derechos m-1">&copy; 2026 ClaSe Electronica. Todos los derechos reservados.</p>
+    </footer>
+        <div class="wsp-flotante">
+            <a href="https://wa.me/5492612086116" target="_blank" rel="noopener" class="wsp-flotante" aria-label="Contactanos por WhatsApp">
+                <img src="../assets/logos/whatsapp.png" alt="Logo de WhatsApp" class="wsp-logo">
+            </a>
+        </div>   
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
