@@ -29,7 +29,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%; /* 5% a los costados se adapta a cualquier ancho */
+    padding: 1rem;
     background-color: #58a5ee;
 }
 
@@ -42,6 +42,24 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+/* NAVBAR */
+
+.navbar-brand{
+    color: #58a5ee;
+}
+
+/* Asegura que el contenedor del dropdown actúe como referencia */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Fuerza al menú a desplegar hacia la derecha/dentro del contenedor */
+.dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+}
+
 
 /* MAIN Y CONTENEDOR */
 main {
