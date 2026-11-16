@@ -24,17 +24,28 @@ img {
     display: block;
 }
 
+/* ESTRUCTURA GENERAL BASE (OPTIMIZADA PARA MONITOR DE PC 22"+) */
+html {
+    font-size: 18px; /* Base sólida para monitor grande */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.25rem 2rem;
     background-color: #58a5ee;
 }
 
 .logo {
-    width: 180px; /* Tamaño equilibrado para notebook */
+    width: 220px;
     height: auto;
 }
 
@@ -44,56 +55,53 @@ a {
 }
 
 /* NAVBAR */
-
-.navbar-brand{
+.navbar-brand {
     color: #58a5ee;
 }
 
-/* Asegura que el contenedor del dropdown actúe como referencia */
 .nav-item.dropdown {
     position: relative;
 }
 
-/* Fuerza al menú a desplegar hacia la derecha/dentro del contenedor */
 .dropdown-menu {
     left: auto !important;
     right: 0 !important;
 }
 
-
-/* MAIN Y CONTENEDOR */
+/* MAIN Y CONTENEDOR PRINCIPAL (BASE MONITOR) */
 main {
+    flex-grow: 1; /* Empuja el footer siempre abajo aunque haya poco texto */
     width: 90%;
-    max-width: 1200px; /* Evita que en monitores grandes se desparrame */
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
 }
 
-/* TIPOGRAFÍAS EN REM (Equilibradas para notebook) */
+/* TIPOGRAFÍAS BASE (MONITOR) */
 h1 {
     font-family: 'BioRhyme', serif;
     text-align: center;
-    font-size: 2.4rem; /* Equivalente a ~38px en vez de 70px */
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
 }
 
 h2 {
     font-family: 'Racing Sans One', sans-serif;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    margin-bottom: 1.25rem;
 }
 
 h3, h4 {
     font-family: 'BioRhyme', serif;
     text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.85rem;
 }
 
 p {
     font-family: 'Lato', sans-serif;
-    font-size: 1.1rem; /* ~17px en vez de 25px */
+    font-size: 1.15rem;
     line-height: 1.6;
     text-align: center;
 }
@@ -104,29 +112,29 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
 }
 
 .servicios-destacados {
     font-family: 'Racing Sans One', sans-serif;
     padding: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
-/* IMÁGENES DENTRO DEL CONTENIDO */
+/* IMÁGENES DENTRO DEL CONTENIDO (MONITOR) */
 .img-camara,
 .img-alarma {
     width: 100%;
-    max-width: 480px; /* Tamaño máximo controlado */
-    border-radius: 24px; /* Un radio más armónico */
+    max-width: 580px;
+    border-radius: 24px;
     object-fit: cover;
 }
 
 .p-camara,
 .p-alarma {
     font-family: 'Lato', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     text-align: center;
 }
 
@@ -146,9 +154,9 @@ p {
         ". img2";
     justify-items: center;
     align-items: center;
-    column-gap: 2rem;
-    row-gap: 1.5rem;
-    padding: 3rem 1rem;
+    column-gap: 2.5rem;
+    row-gap: 1.75rem;
+    padding: 3.5rem 1rem;
 }
 
 .img-camara-grid { grid-area: img1; }
@@ -165,18 +173,18 @@ p {
 footer {
     background-color: #58a5ee;
     width: 100%;
-    padding: 1rem;
+    padding: 1.25rem 1rem;
 }
 
 .encontranos {
     font-family: 'BioRhyme', serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
     color: #fff;
 }
 
 .rrss {
-    height: 35px;
+    height: 38px;
     width: auto;
 }
 
@@ -199,68 +207,91 @@ footer {
 /* BOTÓN WHATSAPP FLOTANTE */
 .wsp-flotante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     z-index: 1000;
 }
 
 .wsp-logo {
-    width: 55px; /* Tamaño estándar accesible y proporcionado */
-    height: 55px;
+    width: 60px;
+    height: 60px;
 }
 
-
-/* PAGINA CONTACTO */
-
-.contacto-h1{
+/* PÁGINAS INTERNAS */
+.contacto-h1 {
     font-family: 'BioRhyme', serif;
     text-align: center;
-    font-size: 1.5rem; 
-    margin-bottom: 1rem; 
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-/* PAGINA SOBRE NOSOTROS */
-
-.fundadores-ClaSe{
+.fundadores-ClaSe {
     font-family: 'BioRhyme', serif;
     text-align: center;
-    font-size: 1.5rem; 
-    margin-bottom: 1rem;    
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 
-/* MEDIA QUERIES */
-/* AJUSTES PARA MONITORES GRANDES (PC de 22" o más) */
-@media (max-width: 1440px) {
+/* ============================================================ */
+/* MEDIA QUERIES                                                */
+/* ============================================================ */
+
+/* 1. ADAPTACIÓN PARA NOTEBOOK (Pantallas medianas hasta 1400px) */
+@media (max-width: 1400px) {
+    html {
+        font-size: 16px; 
+    }
+
     main {
-        max-width: 1350px;
+        max-width: 1150px;
+        padding: 2rem 1rem;
+    }
+
+    .logo {
+        width: 180px;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     .img-camara,
     .img-alarma {
-        max-width: 550px;
+        max-width: 460px;
+    }
+
+    .grid-text {
+        column-gap: 2rem;
+        row-gap: 1.25rem;
+        padding: 2rem 1rem;
+    }
+
+    .wsp-logo {
+        width: 52px;
+        height: 52px;
     }
 }
 
-/* AJUSTE PARA MOBILE */
-
-/* Aplica ÚNICAMENTE desde 0px hasta 767px (celulares) */
+/* 2. ADAPTACIÓN PARA MOBILE */
 @media (max-width: 767px) {
     main {
+        width: 100%;
         max-width: 100%;
         padding: 1rem;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
     }
 
-    .contacto-h1{
-        font-size: 1rem;
+    .contacto-h1,
+    .fundadores-ClaSe {
+        font-size: 1.2rem;
     }
 
     .grid-text {
@@ -274,12 +305,14 @@ footer {
             "p2"
             "sub2"
             "btn2";
+        row-gap: 1rem;
     }
 
     .logo {
-        max-width: 120px;
+        max-width: 130px;
     }
 }
+
 
 
 
