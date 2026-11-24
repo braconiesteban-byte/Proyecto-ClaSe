@@ -68,6 +68,61 @@ a {
     right: 0 !important;
 }
 
+/* 1. ESTADO BASE Y TRANSICIÓN SUAVE */
+.navbar .nav-link,
+.navbar-brand,
+.dropdown-item {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 2. HOVER (Al pasar el mouse) */
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+    color: #0d6efd !important; /* Azul Bootstrap o el tono de tu marca */
+    transform: translateY(-2px); /* Pequeña elevación */
+}
+
+.dropdown-item:hover {
+    background-color: #e7f1ff; /* Fondo suave en los ítems desplegables */
+    color: #0d6efd;
+    padding-left: 1.5rem; /* Efecto sutil de desplazamiento hacia la derecha */
+}
+
+/* 3. FOCUS (Accesibilidad al navegar con teclado Tab o seleccionar) */
+.navbar .nav-link:focus,
+.navbar-brand:focus,
+.dropdown-item:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* 4. ACTIVE (Al hacer clic o mantener presionado) */
+.navbar .nav-link:active,
+.navbar-brand:active,
+.dropdown-item:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    color: #0a58ca !important;
+}
+
+/* 5. BOTÓN TOGGLER (Hamburguesa en mobile) */
+.navbar-toggler {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.4);
+}
+
+.navbar-toggler:active {
+    transform: scale(0.92);
+}
+
+
 /* MAIN Y CONTENEDOR PRINCIPAL (BASE MONITOR) */
 main {
     flex-grow: 1; /* Empuja el footer siempre abajo aunque haya poco texto */
