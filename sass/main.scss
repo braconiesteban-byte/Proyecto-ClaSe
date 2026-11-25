@@ -1,0 +1,14 @@
+
+// sass --watch sass/main.scss style/style.css
+// PARTIALS
+
+
+@use "./utilities/reset";
+
+@use "./layout/header";
+@use "./layout/footer";
+
+@use "./components/alarmas";
+@use "./components/asesoramiento";
+@use "./components/nosotros";
+@use "./components/camaras";

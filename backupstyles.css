@@ -1,0 +1,371 @@
+
+
+/* NUESTROS SERVICIOS DESTACADOS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+/* TEXTOS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* TITULOS FONT */
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regla de oro para que ninguna imagen desborde */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ESTRUCTURA GENERAL BASE (OPTIMIZADA PARA MONITOR DE PC 22"+) */
+html {
+    font-size: 18px; /* Base sólida para monitor grande */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background-color: #58a5ee;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    color: #58a5ee;
+}
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* 1. ESTADO BASE Y TRANSICIÓN SUAVE */
+.navbar .nav-link,
+.navbar-brand,
+.dropdown-item {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 2. HOVER (Al pasar el mouse) */
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+    color: #0d6efd !important; /* Azul Bootstrap o el tono de tu marca */
+    transform: translateY(-2px); /* Pequeña elevación */
+}
+
+.dropdown-item:hover {
+    background-color: #e7f1ff; /* Fondo suave en los ítems desplegables */
+    color: #0d6efd;
+    padding-left: 1.5rem; /* Efecto sutil de desplazamiento hacia la derecha */
+}
+
+/* 3. FOCUS (Accesibilidad al navegar con teclado Tab o seleccionar) */
+.navbar .nav-link:focus,
+.navbar-brand:focus,
+.dropdown-item:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* 4. ACTIVE (Al hacer clic o mantener presionado) */
+.navbar .nav-link:active,
+.navbar-brand:active,
+.dropdown-item:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    color: #0a58ca !important;
+}
+
+/* 5. BOTÓN TOGGLER (Hamburguesa en mobile) */
+.navbar-toggler {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.4);
+}
+
+.navbar-toggler:active {
+    transform: scale(0.92);
+}
+
+
+/* MAIN Y CONTENEDOR PRINCIPAL (BASE MONITOR) */
+main {
+    flex-grow: 1; /* Empuja el footer siempre abajo aunque haya poco texto */
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* TIPOGRAFÍAS BASE (MONITOR) */
+h1 {
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-family: 'Racing Sans One', sans-serif;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1.25rem;
+}
+
+h3, h4 {
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 0.85rem;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* SECCIONES */
+.bienvenidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.servicios-destacados {
+    font-family: 'Racing Sans One', sans-serif;
+    padding: 1.5rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* IMÁGENES DENTRO DEL CONTENIDO (MONITOR) */
+.img-camara,
+.img-alarma {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.p-camara,
+.p-alarma {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+/* GRID DE SERVICIOS */
+.grid-text {
+    display: grid;
+    grid-template-areas:
+        "img1 ."
+        "img1 p1"
+        "img1 sub1"
+        "img1 btn1"
+        "img1 ."
+        ". img2"
+        "p2 img2"
+        "sub2 img2"
+        "btn2 img2"
+        ". img2";
+    justify-items: center;
+    align-items: center;
+    column-gap: 2.5rem;
+    row-gap: 1.75rem;
+    padding: 3.5rem 1rem;
+}
+
+.img-camara-grid { grid-area: img1;}
+.h3-camara       { grid-area: p1; }
+.p-camara        { grid-area: sub1; }
+.btn-grid        { grid-area: btn1; }
+
+.img-alarma-grid { grid-area: img2; }
+.h4-alarma       { grid-area: p2; }
+.p-alarma        { grid-area: sub2; }
+.btn-grid2       { grid-area: btn2; }
+
+/* FOOTER */
+footer {
+    background-color: #58a5ee;
+    width: 100%;
+    padding: 1.25rem 1rem;
+}
+
+.encontranos {
+    font-family: 'BioRhyme', serif;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.rrss {
+    height: 38px;
+    width: auto;
+}
+
+.rrss-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.derechos {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.wsp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.wsp-logo {
+    width: 60px;
+    height: 60px;
+}
+
+/* PÁGINAS INTERNAS */
+.contacto-h1 {
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.fundadores-ClaSe {
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ============================================================ */
+/* MEDIA QUERIES                                                */
+/* ============================================================ */
+
+/* 1. ADAPTACIÓN PARA NOTEBOOK (Pantallas medianas hasta 1400px) */
+@media (max-width: 1400px) {
+    html {
+        font-size: 16px; 
+    }
+
+    main {
+        max-width: 1150px;
+        padding: 2rem 1rem;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .img-camara,
+    .img-alarma {
+        max-width: 460px;
+    }
+
+    .grid-text {
+        column-gap: 2rem;
+        row-gap: 1.25rem;
+        padding: 2rem 1rem;
+    }
+
+    .wsp-logo {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* 2. ADAPTACIÓN PARA MOBILE */
+@media (max-width: 767px) {
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .contacto-h1,
+    .fundadores-ClaSe {
+        font-size: 1.2rem;
+    }
+
+    .grid-text {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "p1"
+            "sub1"
+            "btn1"
+            "img2"
+            "p2"
+            "sub2"
+            "btn2";
+        row-gap: 1rem;
+    }
+
+    .logo {
+        max-width: 130px;
+    }
+}
+
+
+
+

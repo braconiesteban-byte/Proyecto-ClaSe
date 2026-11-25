@@ -1,0 +1,84 @@
+
+@use "../utilities/variables" as *;
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background-color: $color-header-bg;
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.navbar {
+    .navbar-brand {
+        color: $color-brand;
+    }
+
+    .nav-item.dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    // Estados interactivos para links, marca y dropdown
+    .nav-link,
+    .navbar-brand,
+    .dropdown-item {
+        transition: $transition-smooth;
+
+        &:hover {
+            color: $color-primary !important;
+            transform: translateY(-2px);
+        }
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        &:active {
+            transform: scale(0.95);
+            color: $color-primary-dark !important;
+        }
+    }
+
+    .dropdown-item {
+        &:hover {
+            background-color: $color-dropdown-hover-bg;
+            color: $color-primary;
+            padding-left: 1.5rem;
+        }
+    }
+
+    // Botón hamburguesa (Mobile)
+    .navbar-toggler {
+        transition: $transition-toggler;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba($color-primary, 0.4);
+        }
+
+        &:active {
+            transform: scale(0.92);
+        }
+    }
+}

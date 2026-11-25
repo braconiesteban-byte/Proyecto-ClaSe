@@ -1,0 +1,40 @@
+@use "../utilities/variables";
+
+footer {
+    background-color: $color-footer-bg;
+    width: 100%;
+    padding: 1.25rem 1rem;
+
+    .encontranos {
+        font-family: $font-heading;
+        font-size: 1.1rem;
+        text-align: center;
+        color: $color-white;
+    }
+
+    .rrss-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0;
+
+        .rrss {
+            height: 38px;
+            width: auto;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .derechos {
+        font-family: $font-primary;
+        font-size: 0.95rem;
+        text-align: center;
+        color: $color-white;
+        padding: 0;
+    }
+}
